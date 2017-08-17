@@ -2,6 +2,7 @@
   <div id="app">
     <img src="./assets/logo.png">
     <h1>{{ msg }}</h1>
+    <slider-component></slider-component>
     <table-component :table-data="league" :table-headers="leagueHeaders"></table-component>
   
     <form>
@@ -17,6 +18,7 @@
 
 <script>
   import TableComponent from './components/TableComponent.vue'
+  import SliderComponent from './components/SliderComponent.vue'
   import _ from 'lodash';
   
   const resetNewLeagueMember = {
@@ -27,7 +29,8 @@
   export default {
     name: 'app',
     components: {
-      TableComponent
+      TableComponent,
+      SliderComponent
     },
     data() {
       return {
